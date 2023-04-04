@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slides[currentSlide].classList.add("active");
     }
   
-    setInterval(nextSlide, 5000); // 5000ms = 5 секунд между слайдами
+    setInterval(nextSlide, 3000); // 5000ms = 5 секунд между слайдами
   });
     const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slides[currentSlide].classList.add("active");
   }
   
-  setInterval(changeSlide, 5000);
+  setInterval(changeSlide, 3000);
 // Получаем элементы модального окна, крестика и контейнера для изображений
 const modal = document.getElementById("myModal");
 const closeBtn = document.getElementsByClassName("close")[0];

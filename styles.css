@@ -224,6 +224,34 @@ p {
 .modal-open header {
   display: none;
 }
+/* ...предыдущие стили... */
+
+/* Стили для параллакс-эффекта */
+.parallax {
+  background-attachment: fixed;
+}
+
+/* Для мобильных устройств отключаем фиксированный фон */
+@media (max-width: 767px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* ...предыдущие стили... */
+
+/* Анимация иконок */
+@keyframes icon-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.product img {
+  animation: icon-animation 2s infinite;
+}
 
 
 
