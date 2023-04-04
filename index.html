@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oak & Co</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oak & Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Oak & Co</h1>
-    </header>
-    <div class="slider">
-        <div class="slide parallax" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470112063619/slider1.jpg');"></div>
-        <div class="slide" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470405656686/slider2.jpg');"></div>
-        <div class="slide" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470703460445/slider3.jpg');"></div>
-    </div>
-    <main>
+  <header class="header">
+    <h1 class="header__title">Oak & Co</h1>
+  </header>
+  <div class="slider">
+    <div class="slide parallax" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470112063619/slider1.jpg');"></div>
+    <div class="slide" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470405656686/slider2.jpg');"></div>
+    <div class="slide" style="background-image: url('https://media.discordapp.net/attachments/1090284928060637339/1092837470703460445/slider3.jpg');"></div>
+  </div>
+  <main>
+        <section id="parallax" class="parallax-section">
+            <div class="parallax-inner">
+              <h2>Добро пожаловать в "Oak & Co"</h2>
+              <p>Мебель из экологически чистых пород дерева</p>
+            </div>
+        </section>
         <h1>Добро пожаловать в "Oak & Co" - мебель из экологически чистых пород дерева</h1>
         <p>В "Oak & Co" мы предлагаем высококачественную мебель из дуба, лиственницы и кедра, заготавливаемых в Сибири. Наша мебель отличается прочностью, долговечностью и уникальным дизайном. Мы стремимся сделать ваш дом комфортным и стильным, предлагая вам лучшую деревянную мебель.</p>
         <section id="products">
@@ -55,24 +60,9 @@
                 <p>Адрес: г. Москва, ул. Лесозаводская, д. 5</p>
         </section>              
     </main>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-</body>
-</html>
-<!-- ...предыдущий HTML-код... -->
-<main>
-    <section id="parallax" class="parallax-section">
-      <div class="parallax-inner">
-        <h2>Добро пожаловать в "Oak & Co"</h2>
-        <p>Мебель из экологически чистых пород дерева</p>
-      </div>
-    </section>
-    <!-- ...остальные секции... -->
-  </main>
-  <!-- ...следующий HTML-код... -->
-  
+    <footer class="footer">
+      <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
+      <p class="footer__text">Адрес: г. Москва, ул. Лесозаводская, д. 5</p>
+    </footer>
+  </body>
+  </html>
