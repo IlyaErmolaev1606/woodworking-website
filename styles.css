@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #DAA520;
+    background-color: #8B4513;
     color: #000000;
     padding: 1rem;
 }
@@ -26,7 +26,7 @@ section {
 
 p {
     margin: 0.5rem 0;
-    color: #DAA520;
+    color: #8B4513;
 }
 
 .product-grid {
@@ -38,7 +38,7 @@ p {
 
 .product {
     width: 300px;
-    border: 1px solid #DAA520;
+    border: 1px solid #8B4513;
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(218, 165, 32, 0.2);
@@ -54,7 +54,7 @@ p {
 
 .product h3 {
     margin-bottom: 0.5rem;
-    color: #DAA520;
+    color: #8B4513;
 }
 
 .modal {
@@ -81,7 +81,7 @@ p {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #DAA520;
+  color: #8B4513;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -93,3 +93,24 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
+.slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  

@@ -16,4 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
   
+    function nextSlide() {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
+  
+    setInterval(nextSlide, 5000); // 5000ms = 5 секунд между слайдами
+  });
+    
