@@ -38,4 +38,59 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
   setInterval(changeSlide, 5000);
+// Получаем элементы модального окна, крестика и контейнера для изображений
+const modal = document.getElementById("myModal");
+const closeBtn = document.getElementsByClassName("close")[0];
+const images = document.querySelectorAll(".product img");
+
+// Открываем модальное окно при клике на изображение
+images.forEach(image => {
+    image.onclick = function() {
+        modal.style.display = "block";
+        modalImage.src = this.src;
+        caption.innerHTML = this.alt;
+    }
+});
+
+// Закрываем модальное окно при клике на крестик
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Закрываем модальное окно при клике вне области изображения
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// ...предыдущий код...
+
+// Индекс текущего слайда
+let slideIndex;
+
+// Открыть модальное окно с определенным слайдом
+function openModal(n) {
+  slideIndex = n;
+  modal.style.display = "block";
+  modalImage.src = images[slideIndex].src;
+  caption.innerHTML = images[slideIndex].alt;
+  document.body.classList.add("modal-open");
+}
+
+// Изменить текущий слайд
+function plusSlides(n) {
+  const newIndex = slideIndex + n;
+  if (newIndex >= 0 && newIndex < images.length) {
+    openModal(newIndex);
+  }
+}
+
+// Открыть модальное окно при клике на изображение
+images.forEach((image, index) => {
+  image.onclick = function () {
+    openModal(index);
+  };
+});
+
+// ...остальной код...
   
