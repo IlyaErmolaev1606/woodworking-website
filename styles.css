@@ -94,38 +94,40 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
+/* Общие стили для всех устройств */
 .slider {
-  position: relative;
   width: 100%;
-  height: 70vh;
+  height: auto;
+  display: flex;
   overflow: hidden;
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: auto;
   background-size: cover;
+  background-position: center;
 }
 
-.slide.active {
-  opacity: 1;
-}
-
-@media screen and (max-width: 1024px) {
+/* Стили для планшетов (от 768px до 1024px) */
+@media screen and (min-width: 768px) {
   .slider {
-    height: 60vh;
+    height: 400px;
+  }
+
+  .slide {
+    height: 400px;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Стили для компьютеров (от 1025px) */
+@media screen and (min-width: 1025px) {
   .slider {
-    height: 50vh;
+    height: 600px;
+  }
+
+  .slide {
+    height: 600px;
   }
 }
+
