@@ -28,4 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
     setInterval(nextSlide, 5000); // 5000ms = 5 секунд между слайдами
   });
-    
+    const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+  
+  function changeSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+  
+  setInterval(changeSlide, 5000);
+  
