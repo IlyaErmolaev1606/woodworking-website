@@ -109,10 +109,19 @@ p {
   height: 100%;
   opacity: 0;
   transition: opacity 1s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .slide.active {
   opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider {
+    height: 60vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
