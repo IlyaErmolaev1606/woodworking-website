@@ -18,8 +18,20 @@ h1 {
 }
 
 main {
-    padding: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: white;
 }
+
+main h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
 
 section {
     margin-bottom: 2rem;
